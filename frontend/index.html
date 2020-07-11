@@ -7,16 +7,20 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <div class="container-fluid p-0"></div>
 
         <!--Header-->
-        <header class="sticky-top bg-light">
-            <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid pl-0 pr-0 fixed-top">
+        <header class="bg-light">
+            <nav class="navbar navbar-light navbar-expand-md pt-3 pb-3">
                 <a class="navbar-brand" href="#">ORINOCO</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler mr-2 mr-sm-4" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
@@ -25,18 +29,19 @@
                             <a class="nav-link" href="#">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Panier</a>
+                            <a class="nav-link position-relative" href="#"><i class="fas fa-shopping-cart"></i><span id="bag-amount">1</span></a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
+        </div>
         
         <!--End of Header-->
 
         <!--Banner-->
         
-        <div class="row">
+        <div class="row mt-5">
             <div class="col">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
@@ -52,43 +57,8 @@
 
         <!--List of articles-->
 
-        <main class="container-fluid">
-            <div class="row">
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
-                    <img class="card-img-top" src="../images/oak_1.jpg" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Titre de la carte</h2>
-                        <p class="card-text">Commentire de la carte</p>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
-                    <img class="card-img-top" src="../images/oak_1.jpg" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Titre de la carte</h2>
-                        <p class="card-text">Commentire de la carte</p>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
-                    <img class="card-img-top" src="../images/oak_1.jpg" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Titre de la carte</h2>
-                        <p class="card-text">Commentire de la carte</p>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
-                    <img class="card-img-top" src="../images/oak_1.jpg" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Titre de la carte</h2>
-                        <p class="card-text">Commentire de la carte</p>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
-                    <img class="card-img-top" src="../images/oak_1.jpg" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Titre de la carte</h2>
-                        <p class="card-text">Commentire de la carte</p>
-                    </div>
-                </div>
+        <main class="container">
+            <div class="row" id="list-furnitures">
             </div>
         </main>
 
@@ -116,7 +86,6 @@
         
 
        
-    </div>
   
 
     
@@ -124,18 +93,22 @@
         
       
 
-    <!--JS files-->
+    <!--Bootstrap files-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--JS files-->
+    <script src="files.js/list.js" async></script>
 </body>
 </html>
 
-<!--Taille
-Point d'arrêt
-Modificateur de classe
-Très petite < 576 px:aucun
-Petite ≥ 576 px: -sm
-Moyenne ≥ 768 px: -md
-Grande ≥ 992 px: -lg
-Très grande ≥ 1 200 px: -xl-->
+
+
+<!-- <div class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
+    <img class="card-img-top" src="../images/oak_1.jpg" alt="">
+    <div class="card-body">
+        <h2 class="card-title">Titre de la carte</h2>
+        <p class="card-text">Commentire de la carte</p>
+    </div>
+</div> -->

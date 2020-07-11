@@ -1,0 +1,19 @@
+#bag-amount {
+    position: absolute;
+    display: inline-block;
+    padding: 0 5px;
+    border-radius: 30%;
+    background-color: #f09d51;
+    color: #ffffff;
+    top: 1px;
+    right: -5px;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 768px){
+    #bag-amount{
+        right: auto;
+        left: 15px;
+        top: 2px;
+    }
+}
