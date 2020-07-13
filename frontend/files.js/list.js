@@ -19,15 +19,17 @@ class Display {
     displayFurnitures(furnitures){
         let result = '';
         furnitures.forEach(elt => {
-            result += ` <article class="card col-12 col-sm-6 col-md-4 col-lg-3 border-secondary rounded-0">
-                            <img class="card-img-top mt-3" src=${elt.imageUrl} alt="photo du produit">
-                            <div class="card-body">
-                                <h2 class="card-title">${elt.name}</h2>
-                                <p class="card-text"><em>${elt.description}</em></p>
-                                <p class="card-text h3">${elt.price} €</p>
-                            </div>
-                            <button type="button" class="btn btn-primary mb-2 btn-article" data-id="${elt._id}">Voir l'article</button>
-                        </article>`
+            result += ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+                            <article class="card border-secondary">
+                                <img class="card-img-top" src=${elt.imageUrl} alt="photo du produit">
+                                <div class="card-body">
+                                    <h2 class="card-title">${elt.name}</h2>
+                                    <p class="card-text"><em>${elt.description}</em></p>
+                                    <p class="card-text h3">${elt.price / 100} €</p>
+                                </div>
+                                <a type="button" href="frontend/article.html" class="btn btn-primary mb-2 btn-article" data-id="${elt._id}">Voir l'article</a>
+                            </article>
+                        </div>`
         });
         listFurnitures.innerHTML= result;
     }
