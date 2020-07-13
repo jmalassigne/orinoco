@@ -35,12 +35,6 @@ class Display {
     }
 }
 
-/* LocalStorage */
-class Storage {
-   static savePurchase(furnitures){
-        localStorage.setItem('furnitures', JSON.stringify(furnitures));
-   }
-}
 
 /* Save the furniture to display in the article page */
 class ArticleDisplay {
@@ -63,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     furnitures.getFurnitures().then(furnitures =>{
         display.displayFurnitures(furnitures);
-        Storage.savePurchase(furnitures);
         ArticleDisplay.furnitureToDisplayInArticlePage();
     }); 
 })

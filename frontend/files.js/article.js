@@ -2,6 +2,7 @@
 let furnitureId = localStorage.getItem('furnitureToDisplay');
 let pathToCall = 'http://localhost:3000/api/furniture/' + furnitureId;
 let articleLocation = document.getElementById('article');
+let contentBag = {};
 
 /* getting the furniture */
 class Furniture {
@@ -25,19 +26,55 @@ class Display {
                                             <h5 class="card-title">${elt.name}</h5>
                                             <p class="card-text">${elt.description}</p>
                                             <p class="card-text">${elt.price /100} € </p>
-                                            <a href="#" class="btn btn-primary">Ajouter cet article au panier</a>
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="varnish">Vernis: </label>
+                                                    <select class="form-control" id="varnish">
+                                                        
+                                                    </select>
+                                                </div>
+                                            </form>
+                                            <button class="btn btn-primary" id="button" data-id="${elt._id}">Ajouter cet article au panier</button>
                                         </div>
                                     </div>`;
+
+        elt.varnish.forEach(element => {
+            let option = document.createElement('option');
+            option.innerHTML = element;
+            document.getElementById('varnish').appendChild(option);
+        });
+        
         document.title = `${elt.name}`;
     }
 }
 
+class Bag {
+    getButton(){
+        return button = document.getElementById('button');
+    }
+
+    addToTheBag(){
+        button.addEventListener('click', (e) => {
+            let purchaseId = e.target.getAttribute('data-id');
+            if(localStorage.getItem('bag')){
+                console.log('ok')
+            } else {
+                localStorage.setItem('bag', contentBag);
+            }
+        })
+    }
+}
 
 document.addEventListener('DOMContentLoaded',() => {
-    const display = new Display();
-    const furniture = new Furniture();
+    let bag = new Bag;
+    const display = new Display;
+    const furniture = new Furniture;
 
-    furniture.getFurniture().then(result => display.displayFurniture(result));
+    furniture.getFurniture().then(result => 
+        display.displayFurniture(result)).then(() => {
+            bag.getButton();
+            bag.addToTheBag();
+        });
 });
 
 
