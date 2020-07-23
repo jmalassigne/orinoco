@@ -97,6 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ui.displayProducts(data);
         ui.displayBagIcon(get.getContentBag());
     });
+});
+
+window.addEventListener('storage', () => {
+    let ui = new UI;
+    let get = new Get;
+
+    ui.displayBagIcon(get.getContentBag());
 })
             
             

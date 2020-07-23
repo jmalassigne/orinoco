@@ -27,7 +27,7 @@
                                 <a class="nav-link" href="../index.html">Accueil</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link position-relative" href="panier.html"><i class="fas fa-shopping-cart"></i><span id="bag-amount">1</span></a>
+                                <a class="nav-link position-relative" href="panier.html"><i class="fas fa-shopping-cart"></i><span id="bag-amount"></span></a>
                             </li>
                         </ul>
                     </div>
@@ -50,23 +50,31 @@
             <!--End of banner-->
     
            <!-- Panier -->
-           <div class="container-fluid">
+           <div class="container-fluid pb-5">
                <div class="row">
                    <div class="col-0 col-md-1 col-lg-2"></div>
                    <div class="col-12 col-md-10 col-lg-8">
                         <div class="list-group" id="container">
-            
+                            
                         </div>
                    </div>
                    <div class="col-0 col-md-1 col-lg-2"></div>
                </div>
            </div>
            <!-- End of Panier -->
+
+           <!-- Fake container to compensate for footer in fixed position-->
+
+           <div class="container-fluid" style="height: 88px;">
+
+           </div>
+
+           <!-- End of fake container -->
             
     
             <!--Footer-->
     
-            <div class="container-fluid mt-4">
+            <div class="container-fluid mt-4 fixed-bottom">
                 <div class="row bg-light p-4">
                     <div class="col">
                         <ul class="list-inline text-center">

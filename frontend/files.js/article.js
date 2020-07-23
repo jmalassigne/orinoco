@@ -113,6 +113,9 @@ class UI {
         card.appendChild(cardBody);
 
         articleLocation.appendChild(card);
+
+        /* Change title */
+        document.title = product.name;
     }
     displayBagIcon(data){
         if(data){
@@ -146,6 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
             ui.displayProduct(data);
             ui.displayBagIcon(Storage.getBag());
         });
+});
+
+window.addEventListener('storage', () => {
+    let ui = new UI;
+
+    ui.displayBagIcon(Storage.getBag());
 })
 
 
