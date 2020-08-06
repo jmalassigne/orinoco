@@ -78,12 +78,10 @@ class UI {
                         setAttributes(totalAmount, {'id': 'total-amount', 'class': 'text-primary'})
 
 
-                let button = document.createElement('button');
-                setAttributes(button, {'class': "btn btn-primary"})
+                let button = document.createElement('a');
+                setAttributes(button, {'class': "btn btn-primary", 'href': 'validation.html'});
                 button.textContent = 'Validez la commande';
-                button.addEventListener('click',() => {
-                    alert('A faire');
-                })
+                
 
         divAmount.appendChild(text);
         divAmount.appendChild(totalAmount);
