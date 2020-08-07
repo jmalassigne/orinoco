@@ -118,13 +118,13 @@ class UI {
                 let divQuantity = document.createElement('div');
                 setAttributes(divQuantity, {'class': "ml-auto border-left p-2 d-flex align-items-center justify-content-center w-25"});
 
-                        let decrement = document.createElement('i');
+                        let decrement = document.createElement('button');
                         setAttributes(decrement, {'class': "fas fa-less-than btn btn-light text-primary border-primary p-1 mr-1", 'type': "button"});
 
                         let quantity = document.createElement('span');
                         setAttributes(quantity, {'class': 'quantity', 'data-id': product._id});
 
-                        let increment = document.createElement('i');
+                        let increment = document.createElement('button');
                         setAttributes(increment, {'class': "fas fa-greater-than btn btn-light text-primary border-primary p-1 ml-1", 'type': "button"});
 
                 let divPrice = document.createElement('div');

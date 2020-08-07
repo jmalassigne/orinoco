@@ -144,7 +144,7 @@ form.addEventListener('submit', (e) => {
         post.sendRequest(post.bodyRequest())
             .then(response => {
                 Storage.saveRequest(response);
-                window.location.href = '../index.html'
+                window.location.href = './confirmation.html'
         });
     };
 
@@ -153,60 +153,3 @@ form.addEventListener('submit', (e) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const rawResponse = await fetch('http://localhost:3000/api/furniture/order', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(infos)
-    });
-    const content = await rawResponse.json();
-  
-    console.log(content); */
-
-
-
-
-
-/**
- *
- * Expects request to contain:
- * contact: {
- *   firstName: string,
- *   lastName: string,
- *   address: string,
- *   city: string,
- *   email: string
- * }
- * products: [string] <-- array of product _id
- *
- */
-
-/* (async () => {
-    const rawResponse = await fetch('http://localhost:3000/api/furniture/order', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(infos)
-    });
-    const content = await rawResponse.json();
-  
-    console.log(content);
-  })(); */

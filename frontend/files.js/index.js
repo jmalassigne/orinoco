@@ -50,12 +50,14 @@ class UI {
                                     secondPara.classList.add('card-text');
                                     secondPara.textContent =  (product.price /100).toFixed(2) + ' €';
 
-                            let button = document.createElement('a');
+                            let button = document.createElement('button');
                             button.className = 'btn btn-primary mb-2 btn-article ml-2 mr-2';
                             button.setAttribute('type', 'button');
                             button.setAttribute('data-id', product._id);
                             button.textContent = 'Affichez l\'article';
-                            button.setAttribute('href', './frontend/article.html?' + product._id);
+                            button.addEventListener('click', () =>{
+                                window.location.href = './frontend/article.html?' + product._id;
+                            });
 
 
             /* Adding elements to HTML */
